@@ -26,6 +26,7 @@ public class BowBreakDamage implements Listener, CommandExecutor {
         Player player = event.getPlayer();
         //弓であるか
         if (item.getType() == Material.BOW) {
+            //1/2の確率で痛い
             if (U.random.nextBoolean()) {
                 player.sendMessage("痛いっ！弓の糸が当たった！");
                 player.damage(2);
@@ -40,8 +41,10 @@ public class BowBreakDamage implements Listener, CommandExecutor {
                 Player p = (Player) sender;
                 ItemStack item = new ItemStack(Material.BOW);
                 ItemMeta meta = item.getItemMeta();
+                //ダメージ値を設定
                 Damageable damageable = (Damageable) meta;
                 damageable.setDamage(Material.BOW.getMaxDurability()-1);
+                //間違えたと思ったらなぜかこれでうまく動いた
                 item.setItemMeta(meta);
                 U.addItem(p,item);
             }
