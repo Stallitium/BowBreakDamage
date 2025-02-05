@@ -8,8 +8,7 @@ public final class Main extends JavaPlugin {
 
     //config.yml
     FileConfiguration config;
-    //弓破壊ダメージ
-    BowBreakDamage bowBreakDamage;
+
 
     @Override
     public void onEnable() {

@@ -1,0 +1,6 @@
+name: BowBreakDamage
+version: '1.0'
+main: stallitium.bowBreakDamage.Main
+api-version: '1.21'
+commands:
+  bbd:
